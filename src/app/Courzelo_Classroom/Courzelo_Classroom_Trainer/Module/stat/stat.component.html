@@ -1,0 +1,28 @@
+<div id="preloader" class="table-responsive">
+    <div class="section-title mt-50">
+      <h3>Users Behavior</h3>
+<br>
+    </div>
+    <div class="col-xl-12">
+      <div id="chartdiv"></div>
+    </div>
+
+    <div class="col-xl-12">
+
+      <mat-form-field class="example-full-width" appearance="fill" > 
+        <mat-label>Course</mat-label>
+        <mat-select [(ngModel)]="courseId" (selectionChange)="createCharts2(courseId)" >
+          <mat-option value="null" disabled="">choose</mat-option>
+         
+          <mat-option *ngFor="let course of courseList" [value]="course.idFormation">
+            {{course.coursename}}
+          </mat-option>
+        </mat-select>
+      
+      </mat-form-field>
+
+      <div id="chartdiv2"></div>
+    </div>
+    
+
+    
